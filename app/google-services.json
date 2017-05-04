@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "834028834711",
+    "firebase_url": "https://loginapp-e175a.firebaseio.com",
+    "project_id": "loginapp-e175a",
+    "storage_bucket": "loginapp-e175a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834028834711:android:11fe9324be071e72",
+        "android_client_info": {
+          "package_name": "com.edwinacubillos.loginapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834028834711-f58cb8uv87npidrpiljirud2j387015l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edwinacubillos.loginapp",
+            "certificate_hash": "53e2fac6a71de8a94cb7aa8d9e11fe0dc29ef839"
+          }
+        },
+        {
+          "client_id": "834028834711-rkb2b89sdpn6lvt34isi4jj39tv49815.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgt4xuMRz2PKzVhQ8Tdt6csHgk9-nNqcA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834028834711-rkb2b89sdpn6lvt34isi4jj39tv49815.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

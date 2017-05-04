@@ -9,10 +9,12 @@ import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Main2Activity extends AppCompatActivity {
 
-    TextView tName, tId;
+    TextView tName, tCorreo, tUid;
 
 
     @Override
@@ -21,11 +23,18 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         tName =  (TextView) findViewById(R.id.tName);
-        tId = (TextView) findViewById(R.id.tCorreo);
+        tCorreo = (TextView) findViewById(R.id.tCorreo);
+        tUid = (TextView) findViewById(R.id.tUid);
 
-        Bundle bundle = getIntent().getExtras();
+    /*    Bundle bundle = getIntent().getExtras();
         tName.setText(bundle.getString("name"));
-        tId.setText(bundle.getString("ID"));
+        tId.setText(bundle.getString("ID"));*/
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        tName.setText (user.getDisplayName());
+        tCorreo.setText((user.getEmail()));
+        tUid.setText(user.getUid());
+
 
      /*   if (AccessToken.getCurrentAccessToken() == null){
             goMainActivity();
@@ -34,6 +43,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public void logout(View view) {
         LoginManager.getInstance().logOut();
+        FirebaseAuth.getInstance().signOut();
         goMainActivity();
     }
 
