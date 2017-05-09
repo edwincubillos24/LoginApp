@@ -16,7 +16,6 @@ public class Main2Activity extends AppCompatActivity {
 
     TextView tName, tCorreo, tUid;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,19 +25,10 @@ public class Main2Activity extends AppCompatActivity {
         tCorreo = (TextView) findViewById(R.id.tCorreo);
         tUid = (TextView) findViewById(R.id.tUid);
 
-    /*    Bundle bundle = getIntent().getExtras();
-        tName.setText(bundle.getString("name"));
-        tId.setText(bundle.getString("ID"));*/
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         tName.setText (user.getDisplayName());
         tCorreo.setText((user.getEmail()));
         tUid.setText(user.getUid());
-
-
-     /*   if (AccessToken.getCurrentAccessToken() == null){
-            goMainActivity();
-        }*/
     }
 
     public void logout(View view) {
